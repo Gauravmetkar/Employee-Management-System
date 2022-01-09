@@ -1,0 +1,29 @@
+
+
+body{
+    background:#cccccc;     
+}
+
+h3{
+    color:red;
+}
+nav{
+    margin:10px;
+    }
+
+nav a{
+    display:inline-block;
+    width:200px;
+    text-align:center;
+    justify-content:center;
+
+    color:#ffffff;
+    padding:10px 0;
+    margin:10px;
+    
+    
+}
+
+
+
+}

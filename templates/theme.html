@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>All user</title>
+    
+    <link  href="../static/style1.css" rel="stylesheet"/>
+    <style>
+   
+    .footer{
+     background-color:black;
+     color:white;
+     height:100px;
+     font-size:20px;
+    }
+    
+   nav{
+     display:inline-block;
+     margint:10px;
+     padding:10px 0px;
+     color:red;
+     background-color:orange;
+     justify-content:center;
+     text-align:center;
+     width:100%;
+  
+   }
+   
+
+   
+   color:red;
+   
+   }
+   #btn
+   {
+   background-color:orange;
+   color:black;
+   width: 79px;
+    height: 38px;
+    padding: 6px 0px;
+    }
+    #btn:hover
+    {
+    cursor:pointer;
+    background-color:red;
+    border-radius:10px;
+    }
+    #btn1{
+    background-color:green;
+    color:white;
+    margin-left:105px;
+    padding:10px;
+    
+    }
+    
+    #gau{
+    height:300px;
+    width:300px;
+    float:left;
+    
+    }
+    a{
+    text-decoration:none;
+    }
+      
+    </style>
+    
+</head>
+
+<body>
+    <nav>
+    
+        <a href="{{url_for('hello_world')}}" style="color:red">Home</a>
+        <a href="{{url_for('about')}}" style="color:red">About</a>
+        <a href="{{url_for('allusers1')}}" style="color:red">All users</a>
+        
+       
+        
+        
+    </nav>
+    
+    {% block content %}
+
+    {% endblock %}
+    
+    <footer class="footer">
+      <center>  copyright &copy;2021.All Right Rserved.</center>
+    </footer>
+    
+</body>
+</html>
+

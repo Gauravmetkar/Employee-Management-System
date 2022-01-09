@@ -1,0 +1,54 @@
+{% extends 'theme.html' %}
+    
+{% block content %}
+
+    <form action="{{url_for('adduser')}}" method="POST">
+   <fieldset>
+    <legend><b>Personal Information</b></legend>
+    <img src="../static/gau.jpg" alt="img" id="gau" style="height:300px ;width:500px">
+      <center>  <label><b>Name:</b></label>
+        <input type="text" name="ename"/><br><br>
+        
+        <label><b>Contact:</b></label>
+        <input type="number" name="contact"/><br><br>
+        
+        <label><b>Email:</b></label>
+        <input type="email" name="email"/><br><br>
+        
+        <label><b>Password:</b></label>
+        <input type="password" name="password"/><br><br>
+        
+        <label><b>Salary:</b></label>
+        <input type="float" name="salary"/><br><br>
+        
+       <button id="btn">Add User</button><br><br></center>
+       </fieldset>
+     </form>    
+        
+    <table border="1" width="100%" style="margin:10px;">
+        <tr>
+            <th>Ename</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Salary</th>
+            
+            <th colspan="2">Action</th>
+        </tr>
+        
+        {% for row in data %}
+        
+        <tr align="center">
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td><a href="{{url_for('edit',eid=row[0])}}">Edit</a></td>
+            <td><a href="{{url_for('delete',eid=row[0])}}">Delete</a></td>
+        </tr>
+        
+        {% endfor %}
+        
+    </table>
+{% endblock %}

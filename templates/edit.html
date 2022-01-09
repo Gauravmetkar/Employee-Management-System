@@ -1,0 +1,23 @@
+{% extends 'theme.html' %}
+    
+{% block content %}
+
+    <form action="{{url_for('update')}}" method="POST">
+        <input type="hidden" name="eid" value="{{data[0]}}">
+        <label>Ename</label>
+        <input type="text" name="ename" value="{{data[1]}}"/><br><br>
+        <label>Contact</label>
+        <input type="number" name="contact" value="{{data[2]}}"/><br><br>
+        <label>Email</label>
+        <input type="text" name="email" value="{{data[3]}}"/><br><br>
+        <label>Password</label>
+        <input type="password" name="password" value="{{data[4]}}"/><br><br>
+        <label>Salary</label>
+        <input type="float" name="salary" value="{{data[5]}}"/><br><br>
+        
+           <button id="btn1">Update</button><br><br><br><br>
+     </form>    
+     
+{% endblock %}
+    
+  
